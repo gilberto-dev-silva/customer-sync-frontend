@@ -1,64 +1,73 @@
-# frontend
+# Customer Sync Frontend
 
-This template should help get you started developing with Vue 3 in Vite.
+Este projeto é uma aplicação frontend desenvolvida com Vue 3 e Vite, projetada para gerenciar clientes de forma eficiente. Ele inclui funcionalidades como cadastro de clientes, validação de dados, navegação entre páginas e integração com APIs.
 
-## Recommended IDE Setup
+## Tecnologias Utilizadas
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- **Vue 3**: Framework JavaScript progressivo para construção de interfaces de usuário.
+- **Vite**: Ferramenta de build rápida e moderna.
+- **Pinia**: Gerenciamento de estado para Vue.
+- **Vue Router**: Gerenciamento de rotas.
+- **Yup**: Validação de esquemas de dados.
+- **Axios**: Cliente HTTP para comunicação com APIs.
+- **Vitest**: Testes unitários.
+- **Playwright**: Testes de ponta a ponta.
 
-## Type Support for `.vue` Imports in TS
+## Estrutura do Projeto
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
+```plaintext
+src/
+├── assets/         # Arquivos estáticos (CSS, imagens, etc.)
+├── components/     # Componentes Vue reutilizáveis
+├── composables/    # Funções reutilizáveis (composables)
+├── data/           # Dados mockados ou estáticos
+├── router/         # Configuração de rotas
+├── services/       # Serviços para comunicação com APIs
+├── stores/         # Gerenciamento de estado com Pinia
+├── validation/     # Esquemas de validação com Yup
+├── views/          # Páginas principais da aplicação
 ```
 
-### Compile and Hot-Reload for Development
+## Configuração do Ambiente
 
-```sh
-npm run dev
-```
+### Pré-requisitos
 
-### Type-Check, Compile and Minify for Production
+- Node.js (versão 16 ou superior)
+- Gerenciador de pacotes npm ou yarn
 
-```sh
-npm run build
-```
+### Instalação
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
+1. Clone o repositório:
+   ```sh
+   git clone https://github.com/seu-usuario/customer-sync-frontend.git
+   cd customer-sync-frontend
+   ```
 
-```sh
-npm run test:unit
-```
+2. Instale as dependências:
+   ```sh
+   npm install
+   ```
 
-### Run End-to-End Tests with [Playwright](https://playwright.dev)
+### Scripts Disponíveis
 
-```sh
-# Install browsers for the first run
-npx playwright install
+- **Iniciar o servidor de desenvolvimento**:
+  ```sh
+  npm run dev
+  ```
 
-# When testing on CI, must build the project first
-npm run build
+- **Build para produção**:
+  ```sh
+  npm run build
+  ```
 
-# Runs the end-to-end tests
-npm run test:e2e
-# Runs the tests only on Chromium
-npm run test:e2e -- --project=chromium
-# Runs the tests of a specific file
-npm run test:e2e -- tests/example.spec.ts
-# Runs the tests in debug mode
-npm run test:e2e -- --debug
-```
+## Funcionalidades Principais
 
-### Lint with [ESLint](https://eslint.org/)
+- **Dashboard**: Exibe estatísticas gerais sobre os clientes.
+- **Cadastro de Clientes**: Wizard para adicionar novos clientes com validação de dados.
+- **Lista de Clientes**: Exibição paginada e filtrada de clientes.
+- **Validação de Dados**: Utiliza Yup para garantir a integridade dos dados.
+- **Gerenciamento de Estado**: Implementado com Pinia para controle centralizado.
 
-```sh
-npm run lint
-```
+## Licença
+
+Este projeto está licenciado sob a [MIT License](LICENSE).
